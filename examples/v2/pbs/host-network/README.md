@@ -51,9 +51,9 @@ Configuration options
 | prefix            | optional            | String  | Prefix of the names of the instances and other resources in the cluster. Used to distinguish different clusters deployed within the same project. |
 | service_account   | optional            | String  | Service account email 
                     |
-| cidr                | optional            | String  | RFC1918 subnet to run the PBS instances Default: "10.10.0.0/16"                                                                                                                                                                         |
-| network             | requred            | String  | Name of the external network to be used in the deployment.                                                                    |
-| vpc_hosting_project | requred            | String  | Name of the project that hosts the VPC network (current project).                                                                                                |
+| cidr                | optional          | String  | RFC1918 subnet to run the PBS instances Default: "10.10.0.0/16"                                                                                |
+| network             | requred           | String  | Name of the external network to be used in the deployment.                                                                                          |
+| vpc_hosting_project | requred           | String  | Name of the project that hosts the VPC network (current project).                                                                                   |
 
 Example of configuration file
 ==================================

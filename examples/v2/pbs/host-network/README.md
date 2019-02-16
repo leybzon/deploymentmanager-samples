@@ -38,7 +38,7 @@ Deployment Steps
 ================
 
 1.  Update parameters of pbs-cluster-host.yaml file to match name of the shared VPC and region where VPC is deployed
-2.  ....
+2.  Run deployment manager command with pbs-cluster-host.yaml
 
 Configuration options
 ---------------------
@@ -49,12 +49,11 @@ Configuration options
 | region            | required            | String  | Region where the PBS instances are provisioned                                                                                                    |
 | zone              | required            | String  | Zone where the PBS instances are provisioned                                                                                                   |
 | prefix            | optional            | String  | Prefix of the names of the instances and other resources in the cluster. Used to distinguish different clusters deployed within the same project. |
-| service_account   | optional            | String  | Service account email |
-
+| service_account   | optional            | String  | Service account email 
+                    |
 | cidr                | optional            | String  | RFC1918 subnet to run the PBS instances Default: "10.10.0.0/16"                                                                                                                                                                         |
-| network             | optional            | String  | Name of the external network to be used in the deployment. This parameter is required only if the existing_network parameter below is set to true; ignored otherwise.                                                                   |
-| existing_network    | optional            | Boolean | If set to "true", the cluster will be configured to use an already created network with the name taken from the "network" attribute. If set to "false", a new network will be created for the deployment of the cluster. Note that correct routing for the internet traffic between network and the Internet should be configured prior to the deployment if "existing_network " is set to true. Default: false |
-| vpc_hosting_project | optional            | String  | Name of the project that hosts the network.                                                                                                |
+| network             | requred            | String  | Name of the external network to be used in the deployment.                                                                    |
+| vpc_hosting_project | requred            | String  | Name of the project that hosts the VPC network (current project).                                                                                                |
 
 Example of configuration file
 ==================================
